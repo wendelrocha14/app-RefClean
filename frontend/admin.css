@@ -7,23 +7,22 @@
 
 /* FUNDO */
 body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 100vh;
     font-family: 'Poppins', sans-serif;
-
     background: linear-gradient(
         to bottom,
         #5f5f5f 0%,
         #8a8a8a 40%,
         #dcdcdc 100%
     );
+    margin: 0;
+    padding: 0;
 }
 
 /* APP */
 .app {
-    width: 360px;
+    width: 100%;
+    min-height: 100vh;
 }
 
 /* CONTAINER */
@@ -31,7 +30,8 @@ body {
     background: rgba(255, 255, 255, 0.25);
     
 
-    border-radius: 30px;
+    border-radius: 0px;
+    min-height: 100vh;
     padding: 30px 20px;
 
     display: flex;
