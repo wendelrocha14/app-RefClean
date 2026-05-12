@@ -377,7 +377,7 @@ ${detalhesServico}
                         "#166534"
                     );
 
-                    setTimeout(() => {
+                   setTimeout(() => {
 
                         window.location.href = zapUrl;
                     
