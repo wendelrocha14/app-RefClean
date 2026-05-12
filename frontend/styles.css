@@ -7,20 +7,20 @@
 
 body {
   background: #5278a476;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
 }
 
 .app {
   position: relative;
-  width: 360px;
-  height: 720px;
-  background: #F2F4F8;;
-  border-radius: 30px;
+  width: 100%;
+  min-height: 100vh;
+  background: #F2F4F8;
+  border-radius: 0;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  box-shadow: none;
 }
 
 .header {
