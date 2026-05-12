@@ -6,7 +6,7 @@ async function renderizar() {
     const mesSelecionado = document.getElementById("mes").value
 
     try {
-        const res = await fetch("http://127.0.0.1:8000/appointments/admin/agendamentos", {
+        const res = await fetch("/admin/agendamentos", {
             headers: {
                 "x-admin": "1234"
             }
@@ -104,7 +104,7 @@ async function confirmarExclusao() {
     try {
 
         const res = await fetch(
-            `http://127.0.0.1:8000/appointments/admin/agendamentos/${idSelecionado}`,
+            `/admin/agendamentos/${idSelecionado}`,
             {
                 method: "DELETE",
                 headers: {
