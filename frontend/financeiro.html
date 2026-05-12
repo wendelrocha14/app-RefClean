@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financeiro</title>
+
+<!-- 🔥 STATIC CSS -->
+<link rel="stylesheet" href="/static/financeiro.css">
+
+<!-- 🔥 Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="app">
+  <div class="container">
+
+    <h2 class="titulo">FINANCEIRO</h2>
+    <p class="subtitulo">Dashboard de faturamento</p>
+
+    <div class="card-topo">
+
+      <div class="select-card">
+       <label for="mes">Selecione o mês</label>
+
+        <select id="mes" onchange="atualizarValor()">
+          <option value="1">Janeiro</option>
+          <option value="2">Fevereiro</option>
+          <option value="3">Março</option>
+          <option value="4">Abril</option>
+          <option value="5">Maio</option>
+          <option value="6">Junho</option>
+          <option value="7">Julho</option>
+          <option value="8">Agosto</option>
+          <option value="9">Setembro</option>
+          <option value="10">Outubro</option>
+          <option value="11">Novembro</option>
+          <option value="12">Dezembro</option>
+        </select>
+      </div>
+
+      <div class="valor-card">
+        <h1 id="valor">R$ 0,00</h1>
+        <p>Total do mês</p>
+      </div>
+
+    </div>
+    
+    <div class="grafico-card">
+  <canvas id="graficoFinanceiro"></canvas>
+</div>
+
+<div class="btn-area">
+  <button class="btn-voltar" onclick="window.location.href='/admin/home'">
+    Voltar
+  </button>
+</div>
+
+<script src="/static/financeiro.js"></script>
+</body>
+</html>

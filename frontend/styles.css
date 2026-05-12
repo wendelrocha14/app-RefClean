@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #5278a476;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app {
+  position: relative;
+  width: 360px;
+  height: 720px;
+  background: #F2F4F8;;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.header {
+  height: 250px;
+  background: linear-gradient(180deg, #4DA9FF 0%, #BFE4FF 60%, #F5F7FB 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.header img {
+  width: 200px;
+ 
+}
+
+.content {
+  padding: 40px 20px 20px;
+  text-align: center;
+  background: #F5F7FB;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  margin-top: -70px;
+}
+
+.content h2 {
+  font-size: 22px;
+  color: #333;
+}
+
+.content p {
+  color: #777;
+  margin-bottom: 32px;
+}
+
+.card {
+  background: #c7d5e36f; /* cinza escuro elegante */
+  border-radius: 18px;
+
+  padding: 14px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* sombra forte */
+  box-shadow: 
+    0 6px 10px rgba(0,0,0,0.4),
+    0 0 20px rgba(0, 149, 255, 0.449); /* glow azul */
+
+  margin-bottom: 20px;
+
+  transition: 0.25s;
+}
+
+.card:hover {
+  box-shadow: 
+    8px 8px 16px rgba(0,0,0,0.12), 
+    -8px -8px 16px rgba(255,255,255,0.6),
+    0 0 8px rgba(58, 141, 255, 0.25);
+}
+
+.card-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-box {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+  background: linear-gradient(135deg, #4DA9FF, #BFE4FF);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-box img {
+  width: 32px;
+  height: 32px;
+
+  object-fit: contain;
+
+  /* TRANSFORMA EM BRANCO */
+  filter: brightness(0) invert(1);
+          
+}
+
+.arrow {
+  font-size: 26px;
+  font-weight: bold;
+  color: #000;
+}
+
+.footer {
+  margin-top: 60px;
+  font-size: 12px;
+  color: #1a1919c4;
+}
+
+.footer span {
+  display: block;
+  margin-top: 1px;
+}
+.insta-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  margin-top: 20px;
+
+  text-decoration: none;
+  font-weight: bold;
+
+  color: #308beccf; /* cor do Instagram */
+  font-size: 14px;
+
+  transition: 0.2s;
+}
+
+.insta-link i {
+  font-size: 18px;
+}
+
+.insta-link:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+.creditos {
+  position: absolute;
+  bottom: 10px;
+  width: 90%;
+  text-align: center;
+
+  font-size: 11px;
+  color: #555;
+
+  opacity: 0.8;
+}
+
+.creditos strong {
+  color: #070809;
+}
+.servico-opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

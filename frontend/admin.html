@@ -1,0 +1,47 @@
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel Admin</title>
+  <link rel="stylesheet" href="/static/admin.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <div class="container">
+
+    <!-- LOGO -->
+    <img src="/static/imagem/logo.png" class="logo">
+
+    <!-- TÍTULO -->
+    <div class="titulo">
+      <img src="/static/imagem/administrator.png" class="icon-admin">
+      <h2>PAINEL ADMINISTRADOR</h2>
+    </div>
+
+    <!-- CAMPO SENHA -->
+    <div class="field">
+      <label>Digite sua senha</label>
+
+      <div class="input-card">
+        <input type="password" id="senha" placeholder="********">
+      </div>
+    </div>
+
+    <p id="erro-login" class="erro-login"></p>
+    <!-- BOTÃO -->
+    <button class="btn-voltar" id="btn-entrar">Entrar</button>
+    <button class="btn-home" onclick="window.location.href='/'">
+       Voltar
+    </button>
+
+  
+  </div>
+  
+</div>
+
+
+<script src="/static/admin.js"></script>
+</body>
+</html>

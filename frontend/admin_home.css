@@ -1,0 +1,151 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FUNDO */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+
+    background: #e5e7eb;
+    position: relative;
+}
+
+/* IMAGEM DE FUNDO */
+body::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+
+    background: url('imagem/administrator.png') no-repeat center;
+    background-size: contain;
+
+    opacity: 0.05; /* bem clarinho */
+    filter: grayscale(100%);
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* APP */
+.app {
+    width: 360px;
+    position: relative;
+    z-index: 1;
+}
+
+/* CONTAINER */
+.container {
+    position: relative;
+
+    border-radius: 30px;
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+    /* FUNDO COM IMAGEM */
+    background: linear-gradient(
+        rgba(173, 171, 171, 0.859),
+        rgba(232, 232, 232, 0.857)
+    ),
+    url('imagem/administrator.png');
+
+    background-size: cover; /* controla tamanho */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* TÍTULO */
+.titulo {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #080b0f;
+    letter-spacing: 1px;
+}
+
+/* OPÇÕES */
+.opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* CARD */
+.card-opcao {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    background: rgba(255, 255, 255, 0.4);
+    padding: 15px;
+
+    border-radius: 20px;
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: 0.2s;
+}
+
+.card-opcao:hover {
+    transform: scale(1.03);
+}
+
+/* ÍCONE */
+.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    background: #7f8491;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon img {
+    width: 20px;
+    filter: brightness(0) invert(1); /* deixa branco */
+}
+
+/* TEXTO */
+.card-opcao span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* BOTÃO VOLTAR */
+.btn-voltar {
+    margin-top: 10px;
+
+    align-self: center;
+
+    padding: 10px 25px;
+    border-radius: 30px;
+
+    border: none;
+    background: #686d7573;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn-voltar:hover {
+    background: #bfc5cc59;
+}

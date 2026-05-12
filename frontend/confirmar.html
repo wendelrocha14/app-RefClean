@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Agendamento</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Link para o CSS Externo (Onde está toda a mágica do visual) -->
+    <link rel="stylesheet" href="/static/confirmar.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- HEADER AZUL COM SETA -->
+    <div class="header">
+        <div class="header-nav">
+            <i class="fa-solid fa-chevron-left" onclick="window.history.back()"></i>
+        </div>
+
+        <h1>
+            <span>Finalizar</span><br>
+            <strong>Agendamento</strong>
+        </h1>
+    </div>
+
+    <!-- ONDA CURVADA -->
+    <div class="wave"></div>
+
+    <div class="content">
+
+        <!-- NOME -->
+        <div class="field">
+            <span class="field-label">Nome</span>
+            <div class="card">
+                <div class="icon-box">
+                    <img src="/static/imagem/user.png">
+                </div>
+                <input type="text" id="nome" placeholder="Digite seu nome">
+            </div>
+        </div>
+
+        <!-- CELULAR -->
+        <div class="field">
+            <span class="field-label">Celular</span>
+            <div class="card">
+                <div class="icon-box">
+                    <img src="/static/imagem/mobile-phone.png">
+                </div>
+                <input type="tel" id="celular" placeholder="Digite seu número">
+            </div>
+        </div>
+
+        <!-- ENDEREÇO -->
+        <div class="field">
+            <span class="field-label">Endereço</span>
+            <div class="card">
+                <div class="icon-box">
+                    <img src="/static/imagem/location.png">
+                </div>
+                <input type="text" id="endereco" placeholder="Digite seu endereço">
+            </div>
+        </div>
+
+        <!-- DATA -->
+        <div class="field">
+            <span class="field-label">Data</span>
+            <div class="card">
+                <div class="icon-box">
+                    <img src="/static/imagem/calendar.png">
+                </div>
+                <input type="date" id="data">
+            </div>
+        </div>
+
+        <!-- HORÁRIO -->
+        <div class="field">
+            <span class="field-label">Horário</span>
+            <div class="card">
+                <div class="icon-box">
+                    <img src="/static/imagem/clock.png">
+                </div>
+                <select id="horario">
+                    <option value="">Selecione</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- CARD DO TOTAL (PADRÃO BRANCO) -->
+        <div class="card-total">
+            <span class="label-total">VALOR TOTAL</span>
+            <span class="valor-total">R$ <span id="resumoTotal">0,00</span></span>
+        </div>
+
+        <!-- MENSAGENS DE ERRO/SUCESSO -->
+        <div id="msg"></div>
+
+        <!-- BOTÃO VERDE WHATSAPP -->
+        <button id="confirmar" class="btn-confirmar">
+            <img src="/static/imagem/whatsapp.png">
+            Confirmar Agendamento
+        </button>
+
+    </div>
+</div>
+
+<!-- JAVASCRIPT -->
+<script src="/static/schedule.js"></script>
+
+</body>
+</html>

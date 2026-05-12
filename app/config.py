@@ -1,0 +1,1 @@
+ADMIN_ADDRESS = "RUA DO ADM, 123 - centro, nova hartz"

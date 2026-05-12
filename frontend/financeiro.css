@@ -1,0 +1,197 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FUNDO */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+
+    background: #2f2f2f;
+    position: relative;
+}
+
+/* IMAGEM FUNDO */
+body::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+
+    background: url('imagem/financeiro.png') no-repeat center;
+    background-size: contain;
+
+    opacity: 0.05;
+    filter: grayscale(100%);
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* APP */
+.app {
+    width: 360px;
+    position: relative;
+    z-index: 1;
+}
+
+/* CONTAINER */
+.container {
+    border-radius: 30px;
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+    /* IMAGEM COMO FUNDO */
+    background: linear-gradient(
+        rgba(191, 240, 206, 0.77),
+        rgba(230, 244, 234, 0.77)
+    ),
+    url('imagem/financeiro.png');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* TÍTULO */
+.titulo {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e3a2f;
+}
+
+/* SUB */
+.subtitulo {
+    text-align: center;
+    font-size: 16px;
+    color: #2f343a;
+}
+
+/* FIELD */
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.field label {
+    font-size: 13px;
+    color: #374151;
+    margin-left: 8px;
+}
+
+/* SELECT */
+.select-card {
+    background: rgba(255,255,255,0.3);
+    border-radius: 18px;
+    padding: 12px;
+
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.select-card select {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+}
+
+/* VALOR */
+.valor-card {
+    margin-top: 10px;
+
+    background: rgba(255,255,255,0.5);
+    border-radius: 20px;
+    padding: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.valor-card span {
+    font-size: 24px;
+    font-weight: 600;
+    color: #14532d;
+}
+
+/* BOTÃO */
+.btn-voltar {
+    margin-top: 10px;
+    align-self: center;
+
+    width: 100%;
+    height: 52px;
+
+    border-radius: 18px;
+
+    border: none;
+
+    background: #254f52;
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: 200;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+.btn-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#graficoFinanceiro {
+    width: 100%;
+    height: 250px;
+}
+.titulo {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.subtitulo {
+    font-size: 16px;
+    text-align: center;
+    color: #888;
+    margin-bottom: 20px;
+}
+.field label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 6px;
+    display: block;
+}
+#mes {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    background: rgba(255,255,255,0.7);
+    outline: none;
+}
+
+#mes:focus {
+    border-color: #16a34a;
+    box-shadow: 0 0 6px rgba(22,163,74,0.5);
+}

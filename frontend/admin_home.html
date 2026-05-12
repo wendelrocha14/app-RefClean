@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Painel Admin</title>
+<link rel="stylesheet" href="/static/admin_home.css">
+</head>
+
+<body>
+
+<div class="app">
+  <div class="container">
+
+    <!-- TÍTULO -->
+    <h2 class="titulo">PAINEL ADMINISTRADOR</h2>
+
+    <!-- OPÇÕES -->
+    <div class="opcoes">
+
+      <!-- FINANCEIRO -->
+      <div class="card-opcao" onclick="irParaFinanceiro()">
+        <div class="icon">
+          <img src="/static/imagem/financeiro.png">
+        </div>
+        <span>Financeiro</span>
+      </div>
+
+      <!-- AGENDA -->
+      <div class="card-opcao" onclick="irParaAgenda()">
+        <div class="icon">
+          <img src="/static/imagem/agenda.png">
+        </div>
+        <span>Agenda</span>
+      </div>
+
+    </div>
+
+    <!-- Este div pode ser removido se não for mais usar injeção de texto aqui -->
+    <div id="conteudo"></div>
+
+    <!-- BOTÃO -->
+    <button class="btn-voltar" onclick="logout()">Sair</button>
+  </div>
+</div>
+
+<script src="/static/admin_home.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonte -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Veículo</title>
+
+    <link rel="stylesheet" href="/static/vehicle.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- 🔵 HEADER -->
+    <div class="header" style="position: relative; background: linear-gradient(180deg, #38bdf8, #2563eb); padding: 40px 20px 80px; text-align: center; color: white;">
+        
+        <div class="header-nav" style="position: absolute; top: 20px; left: 20px; z-index: 10;">
+            <i class="fa-solid fa-chevron-left" onclick="window.location.href='/'" style="color: white; font-size: 22px; cursor: pointer; padding: 10px;"></i>
+        </div>
+
+        <h1 style="padding-top: 20px;">
+            <span style="font-weight: 300; font-size: 16px;">Você escolheu:</span><br>
+            <strong style="font-size: 28px; font-weight: 700;">Veículo</strong>
+        </h1>
+    </div>
+
+    <!-- 🌊 ONDA CORRIGIDA -->
+    <div class="wave" style="
+        height: 60px;
+        background: #f8fafc;
+        margin-top: -40px;
+        border-top-left-radius: 100% 60px;
+        border-top-right-radius: 100% 60px;
+        position: relative;
+        z-index: 5;
+    "></div>
+
+    <div class="content" style="padding: 20px; display: flex; flex-direction: column; gap: 15px;">
+
+        <!-- VEÍCULO -->
+        <div class="card" id="card-veiculo" data-type="veiculo">
+            <div class="card-left">
+                <div class="icon-box">
+                    <img src="/static/imagem/carro.png" alt="Carro">
+                </div>
+                <span>Tipo de veículo</span>
+            </div>
+            <div class="arrow">›</div>
+        </div>
+        <div id="lista-veiculos" class="lista-veiculos"></div>
+
+        <!-- SERVIÇO -->
+        <div class="card" id="card-servico" data-type="servico">
+            <div class="card-left">
+                <div class="icon-box">
+                    <img src="/static/imagem/servico.png" alt="Serviço">
+                </div>
+                <span>Tipo de serviço</span>
+            </div>
+            <div class="arrow">›</div>
+        </div>
+
+        <!-- MOTO -->
+        <div class="card" id="card-moto" data-type="moto">
+            <div class="card-left">
+                <div class="icon-box">
+                    <img src="/static/imagem/moto.png" alt="Moto">
+                </div>
+                <span>Motos</span>
+            </div>
+            <div class="arrow">›</div>
+        </div>
+        <div id="lista-motos" class="lista-motos"></div>
+
+        <!-- 🔥 NOVO: HIGIENIZAÇÃO LOCALIZADA -->
+        <div class="card" id="card-higienizacao-localizada" data-type="higienização">
+            <div class="card-left">
+                <div class="icon-box">
+                    <img src="/static/imagem/limpeza.png" alt="Higienização">
+                </div>
+                <span>Higienização Localizada</span>
+            </div>
+            <div class="arrow">›</div>
+        </div>
+        <div id="lista-higienizacao" class="lista-veiculos" style="display: none;"></div>
+
+
+        <!-- EXTRAS -->
+        <div class="card" id="card-extra" data-type="extra">
+            <div class="card-left">
+                <div class="icon-box">
+                    <img src="/static/imagem/extra.png" alt="Extras">
+                </div>
+                <span>Extras</span>
+            </div>
+            <div class="arrow">›</div>
+        </div>
+        <div id="lista-extras" class="lista-extras"></div>
+
+        <!-- TOTAL -->
+        <div class="total" id="total" style="background: #ffffff; padding: 20px; border-radius: 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); border: 1px solid rgba(0, 0, 0, 0.02); margin-top: 10px; font-weight: 600;">
+            TOTAL: R$ 0,00
+        </div>
+
+        <!-- ✅ BOTÃO IR PARA AGENDAMENTO AJUSTADO -->
+        <div id="container-agendamento" style="display: none; margin-top: 15px; width: 100%;">
+            <button id="btn-ir-agendamento" style="
+                width: 100%; 
+                padding: 18px; 
+                background: linear-gradient(135deg, #22c55e, #16a34a);
+                color: white; 
+                border: none; 
+                border-radius: 12px; 
+                font-weight: 600; 
+                font-size: 16px; 
+                cursor: pointer;
+                box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                font-family: 'Poppins', sans-serif;
+            ">
+               Revisar serviços <i class="fa-solid"></i>
+            </button>
+        </div>
+
+        <!-- 🧾 RESUMO DO SERVIÇO (NOVO - ESCONDIDO) -->
+        <div id="resumo-servico" style="
+            display: none;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 20px;
+            margin-top: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.02);
+            position: relative;
+        ">
+
+            <!-- BOTÃO FECHAR -->
+            <button id="fechar-resumo" style="
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                background: transparent;
+                border: none;
+                font-size: 18px;
+                cursor: pointer;
+            ">✕</button>
+
+            <h3 style="margin-bottom: 15px;">Revisão do Serviço</h3>
+
+            <p id="resumo-veiculo">Veículo: -</p>
+            <p id="resumo-servico-tipo">Serviço: -</p>
+            <p id="resumo-extras">Extras: -</p>
+            <p id="resumo-higienizacao">Higienização: -</p>
+
+            <div style="
+                margin-top: 15px;
+                font-weight: bold;
+                font-size: 18px;
+            ">
+                Total: <span id="resumo-total">R$ 0,00</span>
+            </div>
+
+            <!-- BOTÃO FINAL -->
+            <button id="btn-confirmar-horario" style="
+                width: 100%;
+                margin-top: 20px;
+                padding: 15px;
+                background: linear-gradient(135deg, #2563eb, #1d4ed8);
+                color: white;
+                border: none;
+                border-radius: 12px;
+                font-weight: 600;
+                cursor: pointer;
+            ">
+                Confirmar horário
+        </button>
+
+    </div>
+ </div>
+</div>
+
+<script src="/static/vehicle.js"></script>
+</body>
+</html>

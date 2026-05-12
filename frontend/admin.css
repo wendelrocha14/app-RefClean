@@ -1,0 +1,179 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FUNDO */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+
+    background: linear-gradient(
+        to bottom,
+        #5f5f5f 0%,
+        #8a8a8a 40%,
+        #dcdcdc 100%
+    );
+}
+
+/* APP */
+.app {
+    width: 360px;
+}
+
+/* CONTAINER */
+.container {
+    background: rgba(255, 255, 255, 0.25);
+    
+
+    border-radius: 30px;
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* LOGO */
+.logo {
+    width: 240px;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.2));
+}
+
+/* TÍTULO */
+.titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.titulo h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    letter-spacing: 1px;
+}
+
+/* ÍCONE ADMIN - CORRIGIDO */
+.icon-admin {
+    width: 40px;
+    
+    
+    /* dourado mais limpo */
+    filter: none;
+}
+
+/* FIELD */
+.field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.field label {
+    font-size: 13px;
+    color: #555;
+    margin-left: 8px;
+}
+
+/* INPUT BALÃO */
+.input-card {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 18px;
+    padding: 14px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.input-card input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+
+    font-size: 14px;
+    color: #333;
+}
+
+/* BOTÃO */
+/* BOTÃO ENTRAR */
+.btn-voltar {
+    width: 80%;
+    height: 42px;
+
+    margin-top: 10px;
+
+    border: none;
+    border-radius: 18px;
+
+    background: linear-gradient(
+        135deg,
+        #1f2937,
+        #374151
+    );
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.18);
+}
+
+/* HOVER */
+.btn-voltar:hover {
+    transform: translateY(-2px);
+
+    background: linear-gradient(
+        135deg,
+        #111827,
+        #1f2937
+    );
+
+    box-shadow:
+    0 14px 30px rgba(0,0,0,0.22);
+}
+
+
+/* BOTÃO VOLTAR HOME */
+.btn-home{
+    width: 80%;
+    height: 40px;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255,255,255,0.35);
+
+    background: rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(8px);
+
+    color: #1f2937;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.btn-home:hover{
+    transform: translateY(-2px);
+
+    background: rgba(255,255,255,0.28);
+}

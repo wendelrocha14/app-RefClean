@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonte -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Estofado</title>
+
+    <link rel="stylesheet" href="/static/estofado.css">
+
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- 🔵 HEADER COM SETA DE VOLTAR -->
+    <div class="header" style="position: relative; background: linear-gradient(180deg, #38bdf8, #2563eb); padding: 40px 20px 80px; text-align: center; color: white;">
+        <div class="header-nav" style="position: absolute; top: 20px; left: 20px; z-index: 10;">
+            <i class="fa-solid fa-chevron-left" onclick="window.location.href='/'" style="color: white; font-size: 22px; cursor: pointer; padding: 10px;"></i>
+        </div>
+        <h1 style="padding-top: 20px;">
+            <span style="font-weight: 300; font-size: 16px;">Você escolheu:</span><br>
+            <strong style="font-size: 28px; font-weight: 700;">Estofado</strong>
+        </h1>
+    </div>
+
+    <!-- 🌊 ONDA (A CURVA) -->
+    <div class="wave" style="height: 60px; background: #f8fafc; margin-top: -40px; border-top-left-radius: 100% 60px; border-top-right-radius: 100% 60px; position: relative; z-index: 5;"></div>
+
+    <!-- 📦 CONTEÚDO -->
+    <div class="content" style="padding: 20px; display: flex; flex-direction: column; gap: 20px;">
+
+        <!-- ✅ SOFÁ -->
+        <div class="card" data-type="sofa" id="card-sofa">
+            <div class="card-left">
+                <div class="icon-box">
+                    <img src="/static/imagem/sofa.png" alt="sofa">
+                </div>
+                <span>Sofá</span>
+            </div>
+            <div class="arrow">›</div>
+        </div>
+
+        <!-- ✅ COLCHÃO -->
+        <div class="card" data-type="colchao" id="card-colchao">
+            <div class="card-left">
+                <div class="icon-box">
+                   <img src="/static/imagem/colchao.png" alt="Colchão">
+                </div>
+                <span>Colchão</span>
+            </div>
+            <div class="arrow">›</div>
+        </div>
+
+        <!-- ✅ TAPETES -->
+        <div class="card" data-type="tapete" id="card-tapete">
+            <div class="card-left">
+                <div class="icon-box">
+                    <img src="/static/imagem/carpet.png" alt="Tapetes">
+                </div>
+                <span>Tapetes</span>
+            </div>
+            <div class="arrow">›</div>
+        </div>
+
+        <!-- ✅ ALMOFADAS -->
+        <div class="card" data-type="almofada" id="card-almofada">
+            <div class="card-left">
+                <div class="icon-box">
+                   <img src="/static/imagem/almofada.png" alt="Almofadas">
+                </div>
+                <span>Almofadas</span>
+            </div>
+            <div class="arrow">›</div>
+        </div>
+
+        <!-- ✅ CADEIRAS -->
+        <div class="card" data-type="cadeira" id="card-cadeira">
+            <div class="card-left">
+                <div class="icon-box">
+                    <img src="/static/imagem/poltrona.png" alt="Cadeiras">
+                </div>
+                <span>Cadeiras</span>
+            </div>
+            <div class="arrow">›</div>
+        </div>
+
+        <!-- 💰 TOTAL -->
+        <div class="total" id="total" style="background: #ffffff; padding: 20px; border-radius: 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); border: 1px solid rgba(0, 0, 0, 0.02); margin-top: 10px;">
+            TOTAL: R$ 0,00
+        </div>
+
+        <!-- ✅ BOTÃO IR PARA AGENDAMENTO -->
+        <div id="container-agendamento" style="display: none; margin-top: 15px; width: 100%;">
+            <button id="btn-ir-agendamento" style="
+                width: 100%; 
+                padding: 18px; 
+                background: linear-gradient(135deg, #22c55e, #16a34a);
+                color: white; 
+                border: none; 
+                border-radius: 12px; 
+                font-weight: 600; 
+                font-size: 16px; 
+                cursor: pointer;
+                box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                font-family: 'Poppins', sans-serif;
+            ">
+                Revisar serviços <i class="fa-solid"></i>
+            </button>
+        </div>
+
+        <div id="resumo-estofado" style="
+                display: none;
+                background: #ffffff;
+                padding: 20px;
+                border-radius: 20px;
+                margin-top: 15px;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+                position: relative;
+">
+
+        <button id="fechar-resumo-estofado" style="
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: transparent;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        ">✕</button>
+
+        <h3>Revisão do Serviço</h3>
+
+        <p id="resumo-tipo-estofado">Serviço: -</p>
+
+        <div style="margin-top: 15px; font-weight: bold; font-size: 18px;">
+            Total: <span id="resumo-total-estofado">R$ 0,00</span>
+        </div>
+
+        <button id="btn-confirmar-estofado" style="
+            width: 100%;
+            margin-top: 20px;
+            padding: 15px;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+    ">
+        Confirmar horário
+    </button>
+
+</div>
+
+</div>
+
+<script src="/static/estofado.js"></script>
+</body>
+</html>

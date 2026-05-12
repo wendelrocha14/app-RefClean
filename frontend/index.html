@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+
+</head>
+
+<body>
+
+<div class="app">
+
+  <div class="header">
+  <img 
+    src="/static/imagem/logo.png" 
+    alt="Logo RF Clean"
+    id="logo-admin"
+  >
+</div>
+
+  <div class="content">
+    <h2>Escolha um serviço</h2>
+    <p>Selecione uma opção para continuar</p>
+
+    <!-- CARD VEÍCULO -->
+    <div class="card" onclick="irParaVeiculo()">
+      <div class="card-left">
+
+        <div class="icon-box">
+          <img src="/static/imagem/carro.png" alt="Carro">
+        </div>
+
+        <span>Veículo</span>
+      </div>
+      <span class="arrow">›</span>
+    </div>
+
+    <!-- CARD ESTOFADO -->
+    <div class="card" onclick="irParaEstofado()">
+      <div class="card-left">
+
+        <div class="icon-box">
+          <img src="/static/imagem/sofa.png" alt="Sofá">
+        </div>
+
+        <span>Estofado</span>
+      </div>
+      <span class="arrow">›</span>
+    </div>
+
+    <div class="footer">
+      <p>Nos siga no Instagram</p>
+
+      <a href="https://www.instagram.com/rf_clean.higienizacao" target="_blank" class="insta-link">
+        <i class="fab fa-instagram"></i>
+        <span>@rf_clean.higienizacao</span>
+      </a>
+    </div>
+
+    <div class="creditos">
+      Criado por <strong>WendelTech</strong>
+    </div>
+
+  </div>
+</div>
+
+<!-- JS -->
+<script src="/static/app.js"></script>
+
+</body>
+</html>
