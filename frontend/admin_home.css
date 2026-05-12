@@ -7,14 +7,12 @@
 
 /* FUNDO */
 body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 100vh;
     font-family: 'Poppins', sans-serif;
-
     background: #e5e7eb;
     position: relative;
+    margin: 0;
+    padding: 0;
 }
 
 /* IMAGEM DE FUNDO */
@@ -37,7 +35,8 @@ body::before {
 
 /* APP */
 .app {
-    width: 360px;
+    width: 100%;
+    min-height: 100vh;
     position: relative;
     z-index: 1;
 }
