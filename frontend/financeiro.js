@@ -8,7 +8,7 @@ async function atualizarValor() {
     try {
         const mes = document.getElementById("mes").value;
 
-        const res = await fetch(`http://127.0.0.1:8000/appointments/admin/financeiro?mes=${mes}`, {
+        const res = await fetch(`/admin/financeiro?mes=${mes}`, {
             headers: {
                 "x-admin": "1234"
             }
@@ -48,7 +48,7 @@ async function carregarGrafico() {
 
     for (let mes of meses) {
         try {
-            const res = await fetch(`http://127.0.0.1:8000/appointments/admin/financeiro?mes=${mes}`, {
+            const res = await fetch(`/admin/financeiro?mes=${mes}`, {
                 headers: {
                     "x-admin": "1234"
                 }
