@@ -6,7 +6,7 @@ if (btnEntrar) {
         const senha = document.getElementById("senha").value;
 
         // Corrigido para o endereço completo do seu servidor
-        const res = await fetch("http://127.0.0.1:8000/admin/login", {
+        const res = await fetch("/admin/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ senha })
