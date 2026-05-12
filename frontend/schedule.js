@@ -379,10 +379,9 @@ ${detalhesServico}
 
                     setTimeout(() => {
 
-                        window.open(
-                            zapUrl,
-                            "_blank"
-                        );
+                        window.location.href = zapUrl;
+                    
+                    }, 1500);
 
                         window.location.href = "/";
 
