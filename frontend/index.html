@@ -4,10 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- PWA -->
+  <link rel="manifest" href="/static/manifest.json">
+  <meta name="theme-color" content="#16a34a">
+
   <!-- CSS -->
   <link rel="stylesheet" href="/static/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
 
 </head>
 
@@ -16,12 +19,12 @@
 <div class="app">
 
   <div class="header">
-  <img 
-    src="/static/imagem/logo.png" 
-    alt="Logo RF Clean"
-    id="logo-admin"
-  >
-</div>
+    <img 
+      src="/static/imagem/logo.png" 
+      alt="Logo RF Clean"
+      id="logo-admin"
+    >
+  </div>
 
   <div class="content">
     <h2>Escolha um serviço</h2>
@@ -71,6 +74,15 @@
 
 <!-- JS -->
 <script src="/static/app.js"></script>
+
+<!-- PWA -->
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/static/sw.js')
+    .then(() => console.log('PWA funcionando'))
+    .catch(err => console.log('Erro SW:', err))
+}
+</script>
 
 </body>
 </html>
